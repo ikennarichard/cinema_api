@@ -9,9 +9,9 @@ Cinema.delete_all
 Movie.delete_all
 CinemaMovie.delete_all
 
-alpha = Cinema.create(name: "Cinema 1", location: 'Lekki')
-beta = Cinema.create(name: "Cinema 2", location: 'Victoria Island')
-charlie = Cinema.create(name: "Cinema 3", location: 'Ikeja')
+alpha = Cinema.create(name: "Alpha", location: 'Lekki')
+beta = Cinema.create(name: "Beta", location: 'Victoria Island')
+charlie = Cinema.create(name: "Charlie", location: 'Ikeja')
 
 spider_man =  Movie.create(title: 'No way home', duration: '2 hrs')
 never_land =  Movie.create(title: 'Teddys Fortune', duration: '1 hrs')
@@ -20,5 +20,5 @@ viewing = CinemaMovie.create([
   {cinema: alpha, movie: spider_man},
   {cinema: beta, movie: never_land},
   {cinema: beta, movie: never_land},
-  {cinema: charlie, movie: movie1},
+  {cinema: charlie, movie: spider_man},
 ])
