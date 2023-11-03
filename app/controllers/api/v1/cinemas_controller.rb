@@ -1,5 +1,5 @@
-class CinemasController < ApplicationController
-  before_action :set_cinema, only: %i[ show update destroy ]
+class Api::V1::CinemasController < ApplicationController
+  before_action :et_cinema, only: %i[ show update destroy ]
 
   # GET /cinemas
   def index
