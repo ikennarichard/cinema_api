@@ -1,16 +1,20 @@
 class Api::V1::CinemasController < ApplicationController
-  before_action :et_cinema, only: %i[ show update destroy ]
+  before_action :set_cinema, only: %i[ show update destroy get_movies ]
 
-  # GET /cinemas
+  # GET api/v1/cinemas
   def index
     @cinemas = Cinema.all
 
     render json: @cinemas
   end
 
-  # GET /cinemas/1
+  # GET api/v1/cinemas/:name
   def show
-    render json: @cinema
+    if @cinema
+      render json: @cinema
+    else
+      render json: { error: "Cinema not available" }, status: :not_found
+    end
   end
 
   # POST /cinemas
@@ -38,10 +42,22 @@ class Api::V1::CinemasController < ApplicationController
     @cinema.destroy
   end
 
+  # Cinema Movies /cinemas/:name/movies
+  def get_movies
+    movies = @cinema.movies
+
+    if movies
+      render json: movies
+    else
+      render json: { error: "No movies available" }, status: :unprocessable_entity
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_cinema
-      @cinema = Cinema.find(params[:id])
+      cinema_name = params[:name].capitalize!
+      @cinema = Cinema.find_by(name: cinema_name)
     end
 
     # Only allow a list of trusted parameters through.

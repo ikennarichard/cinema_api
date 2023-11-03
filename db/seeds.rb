@@ -5,9 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+CinemaMovie.delete_all
 Cinema.delete_all
 Movie.delete_all
-CinemaMovie.delete_all
+
 
 alpha = Cinema.create(name: "Alpha", location: 'Lekki')
 beta = Cinema.create(name: "Beta", location: 'Victoria Island')
@@ -19,6 +20,6 @@ never_land =  Movie.create(title: 'Teddys Fortune', duration: '1 hrs')
 viewing = CinemaMovie.create([
   {cinema: alpha, movie: spider_man},
   {cinema: beta, movie: never_land},
-  {cinema: beta, movie: never_land},
+  {cinema: beta, movie: spider_man},
   {cinema: charlie, movie: spider_man},
 ])
