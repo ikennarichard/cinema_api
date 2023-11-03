@@ -1,3 +1,4 @@
 class Movie < ApplicationRecord
-  belongs_to :cinema
+  has_many :cinema_movies
+  has_many :cinemas, through: :cinema_movies
 end
