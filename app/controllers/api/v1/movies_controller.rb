@@ -1,5 +1,5 @@
 class Api::V1::MoviesController < ApplicationController
-  before_action :set_movie, only: %i[ show update destroy ]
+  before_action :set_movie, only: %i[ show update destroy get_cinemas ]
 
   # GET /movies
   def index
@@ -36,6 +36,17 @@ class Api::V1::MoviesController < ApplicationController
   # DELETE /movies/1
   def destroy
     @movie.destroy
+  end
+
+  # Get cinemas showing movie /movies/:id/cinemas
+  def get_cinemas
+    cinemas = @movie.cinemas
+
+    if cinemas
+      render json: cinemas
+    else
+      render json: { error: "No viewings available" }, status: :unprocessable_entity
+    end
   end
 
   private
