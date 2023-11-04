@@ -22,24 +22,28 @@ class Api::V1::CinemasController < ApplicationController
     @cinema = Cinema.new(cinema_params)
 
     if @cinema.save
-      render json: @cinema, status: :created, location: @cinema
+      render json: { message: 'Cinema added successfully', data: @cinema}, status: :created
     else
-      render json: @cinema.errors, status: :unprocessable_entity
+      render json: @cinema.errors.full_messages, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /cinemas/1
-  def update
-    if @cinema.update(cinema_params)
-      render json: @cinema
-    else
-      render json: @cinema.errors, status: :unprocessable_entity
-    end
-  end
+  # def update
+  #   if @cinema.update(cinema_params)
+  #     render json: @cinema
+  #   else
+  #     render json: @cinema.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # DELETE /cinemas/1
   def destroy
-    @cinema.destroy
+    if @cinema.destroy
+      render json: { message: 'Deleted successfully' }
+    else 
+      render json: { error: 'Encountered an error deleting cinema' }
+    end
   end
 
   # Cinema Movies /cinemas/:name/movies
