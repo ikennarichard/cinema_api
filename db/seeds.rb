@@ -9,7 +9,6 @@ CinemaMovie.delete_all
 Cinema.delete_all
 Movie.delete_all
 
-
 alpha = Cinema.create(name: "Alpha", location: 'Lekki')
 beta = Cinema.create(name: "Beta", location: 'Victoria Island')
 charlie = Cinema.create(name: "Charlie", location: 'Ikeja')
