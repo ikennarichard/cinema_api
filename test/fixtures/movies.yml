@@ -3,9 +3,11 @@
 one:
   title: MyString
   duration: MyString
-  cinema: one
 
 two:
   title: MyString
   duration: MyString
-  cinema: two
+
+equalizer:
+  title: Equalizer
+  duration: 2 hours

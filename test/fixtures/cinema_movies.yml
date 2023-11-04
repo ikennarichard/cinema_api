@@ -7,3 +7,7 @@ one:
 two:
   cinema: two
   movie: two
+
+third:
+  cinema: movieland
+  movie: equalizer

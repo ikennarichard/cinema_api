@@ -7,3 +7,7 @@ one:
 two:
   name: MyString
   location: MyString
+
+movieland:
+  name: 'Movieland'
+  location: 'Antartica'
