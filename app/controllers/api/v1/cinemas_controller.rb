@@ -24,20 +24,21 @@ class Api::V1::CinemasController < ApplicationController
     if @cinema.save
       render json: { message: 'Cinema added successfully', data: @cinema}, status: :created
     else
-      render json: @cinema.errors.full_messages, status: :unprocessable_entity
+      render json: @cinema.errors.full_messages, 
+      status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /cinemas/1
-  # def update
-  #   if @cinema.update(cinema_params)
-  #     render json: @cinema
-  #   else
-  #     render json: @cinema.errors, status: :unprocessable_entity
-  #   end
-  # end
+  def update
+    if @cinema.update(cinema_params)
+      render json: @cinema
+    else
+      render json: @cinema.errors, status: :unprocessable_entity
+    end
+  end
 
-  # DELETE /cinemas/1
+  # DELETE /cinemas/:name
   def destroy
     if @cinema.destroy
       render json: { message: 'Deleted successfully' }
@@ -46,14 +47,15 @@ class Api::V1::CinemasController < ApplicationController
     end
   end
 
-  # Cinema Movies /cinemas/:name/movies
+  # GET /cinemas/:name/movies
   def get_movies
     movies = @cinema.movies
 
     if movies
       render json: movies
     else
-      render json: { error: "No movies available" }, status: :unprocessable_entity
+      render json: { error: "No movies available" }, 
+      status: :unprocessable_entity
     end
   end
 
