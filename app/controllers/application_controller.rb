@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::API
   include JsonWebToken
 
-  before_action :authenticate_request, unless: -> { Rails.env.test? }
+  # before_action :authenticate_request, unless: -> { Rails.env.test? }
 
-  private
+  # private
 
   def authenticate_request
     header = request.headers['Authorization']
