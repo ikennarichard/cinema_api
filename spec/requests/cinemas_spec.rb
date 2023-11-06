@@ -14,7 +14,7 @@ RSpec.describe Cinema, type: :request do
     end
 
     it 'should return status code 200' do
-      expect(response).to have_http_status(:success)
+      expect(response).to have_http_status(200)
     end
   end
 
@@ -30,7 +30,7 @@ RSpec.describe Cinema, type: :request do
     end
     
     it "should create a new cinema" do
-      expect(response).to have_http_status(:success)
+      expect(response).to have_http_status(201)
       expect(json["message"]).to eq("Cinema added successfully")
       expect(json["data"]["location"]).to eq("Asaba")
     end
