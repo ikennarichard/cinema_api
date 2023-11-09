@@ -40,24 +40,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- Display Categories
-- Display transactions for each each category
-- Add category that you want to track
-- Add transactions for the category
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-[Live Demo](https://budget-buddy-j2ry.onrender.com)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🎥 Project Demo <a name="project-demo"></a>
-
-[Video Demo](https://www.loom.com/share/8653d017edfb4ce59b4c79760943112f?sid=9ea18934-5404-432e-9052-17d99fea175d)
+- Create, Update, Delete and view Cinems and Movies
+- Register/authenticate user
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -97,6 +81,10 @@ bin/rails server
 
 ### Run test
 To run test, run the following command in the terminal
+
+```bash
+ rails test
+```
 ```sh
 rspec
 ```
@@ -113,8 +101,7 @@ rspec
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Delete transactions
-- Link payments for transactions you want to track
+- Add screenings to the cinema model
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -122,7 +109,7 @@ rspec
 
 Contributions, issues, and feature requests are welcome! Add suggestions by opening new issues.
 
-Feel free to check the [issues page](https://github.com/ikennarichard/Budget-Buddy/issues).
+Feel free to check the [issues page](https://github.com/ikennarichard/cinema_api/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -133,7 +120,7 @@ Give a ⭐️ if you like this project!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
--  Thanks to [Gregoire Vella](https://www.behance.net/gregoirevella) for his inspiring design on [Behance](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=&)
+
 - [Microverse](https://www.microverse.org/)
 - Coding Partners
 
