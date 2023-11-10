@@ -10,6 +10,6 @@ class CinemaTest < ActiveSupport::TestCase
       )
 
     assert_not cinema.valid?
-    assert_equal ["Cinema in the same location must have a unique name"], cinema.errors[:name]
+    assert_equal [":Cinema in the same location must have a unique name"], cinema.errors[:name]
   end
 end
