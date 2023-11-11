@@ -29,7 +29,7 @@
 
 # 📖 Cinema
 
->This is an api that list cinemas in Lagos along with movies that are currently showing, user can view list of cinemas in different locations or search for a movie and see where to watch them.
+>This is an api that list cinemas in Lagos along with movies that are currently showing, user can view list of cinemas in different locations or see listings for various movies.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -37,7 +37,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- Create, Update, Delete and view Cinems and Movies
+- Display Cinems and Movies
+- See list of movies for a given cinema
 - Register/authenticate user
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
