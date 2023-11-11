@@ -3,7 +3,7 @@
 
 <div align="center">
 
-  <h1><b>Gidi Cinemas</b></h1>
+  <h1><b>Cinemas</b></h1>
 
 </div>
 
@@ -27,15 +27,12 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 BudgetBuddy
+# 📖 Cinema
 
->This is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, which shows how much money you spent and on what. Built with Rails.
-
-![homepage](./app/assets/images/budget-buddy-homepage.PNG)
+>This is an api that list cinemas in Lagos along with movies that are currently showing, user can view list of cinemas in different locations or search for a movie and see where to watch them.
 
 ## 🛠 Built With <a name="built-with"></a>
 
-- `Ruby`
 - `Ruby on rails`
 
 ### Key Features <a name="key-features"></a>
@@ -55,6 +52,7 @@ git clone https://github.com/ikennarichard/Budget-Buddy.git
 ```
 
 ### Prerequisites
+
 - Rails
 - Ruby
 
