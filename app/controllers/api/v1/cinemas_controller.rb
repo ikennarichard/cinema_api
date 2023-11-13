@@ -24,8 +24,10 @@ class Api::V1::CinemasController < ApplicationController
     @cinema = Cinema.new(cinema_params)
 
     if @cinema.save
-      render json: { message: 'Cinema added successfully', 
-      data: @cinema }, status: :created
+      render json: { 
+        message: 'Cinema added successfully', 
+        data: @cinema 
+        }, status: :created
     else
       render json: @cinema.errors.full_messages, 
       status: :unprocessable_entity
@@ -35,7 +37,7 @@ class Api::V1::CinemasController < ApplicationController
   # PATCH/PUT /api/v1/cinemas/name
   def update
     if @cinema.update(cinema_params)
-      render json: @cinema
+      render json: { message: 'Update successful', data: @cinema }
     else
       render json: @cinema.errors, status: :unprocessable_entity
     end
