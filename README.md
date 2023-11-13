@@ -49,7 +49,7 @@
 To clone the repository in local environment try following steps.
 
 ```sh
-git clone https://github.com/ikennarichard/Budget-Buddy.git
+git clone https://github.com/ikennarichard/cinema_api.git
 ```
 
 ### Prerequisites
