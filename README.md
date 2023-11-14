@@ -31,7 +31,7 @@
 
 >This is an api that list cinemas in Lagos along with movies that are currently showing, user can view list of cinemas in different locations or see listings for various movies.
 
-[Documentation]('https://www.postman.com/orbital-module-astronomer-48460559/workspace/my-workspace/collection/30969083-7d04cf41-ae82-4f4e-878e-227706fc44ef?action=share&creator=30969083')
+[Documentation](https://www.postman.com/orbital-module-astronomer-48460559/workspace/my-workspace/collection/30969083-7d04cf41-ae82-4f4e-878e-227706fc44ef?action=share&creator=30969083)
 
 ## 🛠 Built With <a name="built-with"></a>
 
